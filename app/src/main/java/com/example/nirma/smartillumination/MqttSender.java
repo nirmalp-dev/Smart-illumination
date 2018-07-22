@@ -6,10 +6,10 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import java.io.UnsupportedEncodingException;
 
 public class MqttSender extends MqttManager  {
-    void sendMessage()
+    void sendMessage(String msg)
     {
-        String topic = "foo/bar";
-        String payload = "the payload";
+        String topic = "SmartIllumination";
+        String payload = msg;
         byte[] encodedPayload = new byte[0];
         try {
             encodedPayload = payload.getBytes("UTF-8");
