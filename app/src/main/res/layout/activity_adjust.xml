@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Adjust">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <Button
+
+            android:layout_width="180dp"
+            android:layout_margin="9dp"
+            android:textSize="24sp"
+            android:text="automatic"
+            android:id="@+id/auto"
+            android:fontFamily="casual"
+            android:background="@drawable/button_bg2"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="180dp"
+            android:layout_margin="9dp"
+            android:textSize="24sp"
+            android:text="manual"
+            android:id="@+id/manual"
+            android:fontFamily="casual"
+            android:background="@drawable/button_bg2"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+             android:layout_margin="9dp" />
+    </LinearLayout>
+
+</RelativeLayout>

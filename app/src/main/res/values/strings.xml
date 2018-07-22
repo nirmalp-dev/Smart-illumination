@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Smart illumination</string>
+    <string name="title_activity_mqtt_manager">MqttManager</string>
+</resources>
