@@ -17,9 +17,14 @@ android {
         }
     }
 }
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-releases/"
+    }
+}
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:design:27.1.1'
@@ -29,4 +34,5 @@ dependencies {
     implementation('org.eclipse.paho:org.eclipse.paho.android.service:1.0.2') {
         exclude module: 'support-v4'
     }
+
 }

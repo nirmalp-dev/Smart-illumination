@@ -22,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Adjust" />
-
+        <activity android:name=".MqttManager" />
+        <activity android:name=".Dashboard"/>
         <service android:name="org.eclipse.paho.android.service.MqttService" />
 
-        <activity android:name=".MqttManager"></activity>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.example.nirma.smartillumination;
 
 import android.util.Log;
 
+import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;
 import org.eclipse.paho.client.mqttv3.IMqttToken;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -12,6 +13,10 @@ public class MqttListener extends MqttManager {
         String topic = s;
         int qos = 1;
         try {
+            MqttAndroidClient client =
+                    new MqttAndroidClient(MqttListener.this, "tcp://broker.hivemq.com:1883",
+                            MainActivity.clientId);
+
             IMqttToken subToken = client.subscribe(topic, qos);
             subToken.setActionCallback(new IMqttActionListener() {
                 @Override
@@ -35,6 +40,9 @@ public class MqttListener extends MqttManager {
     {
         final String topic = s;
         try {
+            MqttAndroidClient client =
+                    new MqttAndroidClient(MqttListener.this, "tcp://broker.hivemq.com:1883",
+                            MainActivity.clientId);
             IMqttToken unsubToken = client.unsubscribe(topic);
             unsubToken.setActionCallback(new IMqttActionListener() {
                 @Override

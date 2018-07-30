@@ -9,28 +9,36 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:gravity="center">
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:orientation="horizontal">
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/topic"
-                android:hint="msg "
-                android:layout_weight="0.4"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="publish"
-                android:fontFamily="casual"
-                android:textSize="20dp"
-                android:background="@drawable/button_bg"
-                android:layout_weight="0.6"/>
-
-        </LinearLayout>
+            android:id="@+id/payload"
+            android:hint="message goes here"
+            android:fontFamily="monospace"
+            android:inputType="textMultiLine"/>
+        <Button
+            android:layout_marginTop="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/publish"
+            android:background="@drawable/button_bg"
+            android:textSize="18sp"
+            android:text="publish"
+            android:fontFamily="casual" />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Dashboard"
+            android:layout_width="150dp"
+            android:id="@+id/dashboard"
+            android:textSize="18sp"
+            android:fontFamily="casual"
+            android:background="@drawable/button_bg"/>
     </LinearLayout>
 
 
